@@ -1,3 +1,4 @@
+const { error } = require('console');
 const depress  = require('express');
 
 const app = depress()
@@ -18,3 +19,9 @@ app.get('/about',(req,res)=>{
 app.listen(3000,()=>{
     console.log("Server Running on port 3000")
 })
+
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
