@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8">
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 text-center">Rename The File </h2>
+      <form action="/edit" method="post" class="grid gap-4">
+        <input
+          type="text"
+          placeholder="Title goes Here"
+          class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+            name="previous"
+            value="<%= filename %>"
+          />
+        <input
+          type="text"
+          placeholder="Rename Here"
+          class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-3 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+            name="new"
+          />
+
+
+
+        <input
+          type="submit"
+          value="Rename File"
+          class="w-full cursor-pointer rounded-xl bg-yellow-600 px-4 py-3 font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
+        />
+      </form>
+    </div>
+
+</body>
+</html>
